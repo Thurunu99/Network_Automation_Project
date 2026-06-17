@@ -1,39 +1,28 @@
-Enterprise Network Automation Toolkit
-A professional-grade Python framework designed for automated network infrastructure management. This project demonstrates the ability to manage device inventories using data-driven principles and perform automated audits across network devices.
+# 🚀 Enterprise Network Automation Toolkit
 
-Features
-Data-Driven Architecture: Uses JSON for inventory management to separate configuration data from logic.
+A professional-grade Python framework designed for automated network infrastructure management. This project bridges the gap between manual network administration and modern automated infrastructure governance.
 
-Automated Auditing: Connects to network devices using Netmiko to retrieve hardware/software versions automatically.
+## 🌟 Key Features
+*   **Data-Driven Architecture**: Decouples configuration data from core logic using JSON-based inventory management.
+*   **Automated Auditing**: Utilizes the `Netmiko` library to establish secure SSH connections and retrieve real-time hardware/software status across network devices.
+*   **Scalable Design**: Easily extendable to manage complex multi-vendor network environments.
 
-Scalable Design: Easily extendable to manage hundreds of devices simultaneously.
+## 📂 Project Structure
+*   `inventory.json`: Centralized configuration storage for network devices (IP addresses, credentials).
+*   `01_inventory_manager.py`: Utility script for loading and validating device inventory.
+*   `02_network_auditor.py`: Core automation script for executing audit commands and retrieving device data.
+*   `README.md`: Project documentation and configuration guide.
+*   `.gitignore`: Prevents sensitive credentials from being uploaded to the repository.
 
-Project Structure
-inventory.json: Centralized configuration storage for network devices (IPs, Credentials).
+## 🛠 Prerequisites
+*   **Python 3.x**
+*   **Netmiko Library**: Install via pip:
+```bash
+    pip install netmiko
+    ```
+*   **Network Lab Environment**: Access to Cisco IOS devices (GNS3, Cisco Modeling Labs, or physical lab).
 
-01_inventory_manager.py: Utility script to manage and validate device inventory.
-
-02_network_auditor.py: Core automation script that establishes SSH connections and runs audit commands.
-
-.gitignore: Security configuration to prevent sensitive data from being uploaded to GitHub.
-
-Prerequisites
-Python 3.x
-
-Netmiko Library: pip install netmiko
-
-Access to Cisco IOS devices (or GNS3 lab environment)
-
-How to Run
-Clone the repository.
-
-Install dependencies:
-
-Bash
-pip install netmiko
-Update inventory.json with your router details.
-
-Run the auditor script:
-
-Bash
-python 02_network_auditor.py
+## 🚀 Getting Started
+1. **Clone the repository**:
+```bash
+   git clone <your-repository-url>
