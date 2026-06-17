@@ -1,22 +1,39 @@
-# Enterprise Network Automation Toolkit
-A Python framework for managing network infrastructure using data-driven principles.
+Enterprise Network Automation Toolkit
+A professional-grade Python framework designed for automated network infrastructure management. This project demonstrates the ability to manage device inventories using data-driven principles and perform automated audits across network devices.
 
-## Structure
-- inventory.json: Configuration data.
-- 01_inventory_manager.py: Python script to load and manage network device inventory.
+Features
+Data-Driven Architecture: Uses JSON for inventory management to separate configuration data from logic.
 
-# Enterprise Network Automation Toolkit
+Automated Auditing: Connects to network devices using Netmiko to retrieve hardware/software versions automatically.
 
-A Python framework for managing network infrastructure using data-driven principles.
+Scalable Design: Easily extendable to manage hundreds of devices simultaneously.
 
-## Structure
-- inventory.json: Configuration data for network devices (Separation of concerns).
-- 01_inventory_manager.py: Python script to load and manage network device inventory.
-- 02_network_auditor.py: Script to connect to routers and perform automated audits.
+Project Structure
+inventory.json: Centralized configuration storage for network devices (IPs, Credentials).
 
-## How to Run
-1. Ensure Python is installed.
-2. Install dependencies:
-   pip install netmiko
-3. Run the auditor:
-   python 02_network_auditor.py
+01_inventory_manager.py: Utility script to manage and validate device inventory.
+
+02_network_auditor.py: Core automation script that establishes SSH connections and runs audit commands.
+
+.gitignore: Security configuration to prevent sensitive data from being uploaded to GitHub.
+
+Prerequisites
+Python 3.x
+
+Netmiko Library: pip install netmiko
+
+Access to Cisco IOS devices (or GNS3 lab environment)
+
+How to Run
+Clone the repository.
+
+Install dependencies:
+
+Bash
+pip install netmiko
+Update inventory.json with your router details.
+
+Run the auditor script:
+
+Bash
+python 02_network_auditor.py
